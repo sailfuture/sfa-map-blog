@@ -17,7 +17,7 @@ const lora = Lora({
   variable: "--font-lora"
 });
 
-export async function sharedMetaData(params) {
+export async function {
   const settings = await getSettings();
 
   return {
@@ -54,10 +54,6 @@ export async function sharedMetaData(params) {
       follow: true
     }
   };
-}
-
-export async function generateMetadata({ params }) {
-  return await sharedMetaData(params);
 }
 
 export default async function Layout({ children, params }) {
